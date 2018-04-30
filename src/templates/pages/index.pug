@@ -1,0 +1,89 @@
+extends ../template
+
+block variables
+    - var title = 'Тест. Верстска с использованием сетки bootstrap 4'
+
+block content
+    header.header
+        .container
+            .row.align-items-center
+                .col
+                    .user
+                        img(src="assets/images/user.jpg" class="header-img" alt="фото разаработчика")
+                        .user-name-mail
+                            .user-name Сишненко Евгений
+                            .user-mail sishnenko86@mail.ru
+                .col
+                    .social
+                        ul.social-list
+                            -
+                                var socials = [
+                                    ['vk', 'https://vk.com/id17101589', 'assets/sprite/vk.svg'],
+                                    ['sk', 'https://vk.com/id17101589', 'assets/sprite/sk.svg'],
+                                    ['git', 'https://github.com/EvgeniySishnenko', 'assets/sprite/git.svg'],
+                                ]
+                            each social in socials
+                                li.social-item
+                                    a.social-link(href=`${social[1]}` target="_blank")
+                                        img.social-img(src=`${social[2]}`)
+    section.hero
+        .block-title
+            h2.h2-title Информация о разработчике
+            .title-description Посетителям страницы будет интерсно узнать о разработчике 
+        .container
+            .row.justify-content-center
+                .col-sm
+                    .row.align-items-center
+                        .col-lg-4
+                            img.info-img(src="assets/sprite/hello.svg" alt="Информация о разработчике")
+                        .col-lg-8
+                            h3.h3-title Немного обо мне
+                            .info-text Я живу в Москве (Россия). Мне 32 года. Закончил курсы- LoftSchool. Опыт в разработке 1 год. Уже окончил курсы продвинутому программированию , где не плохо научился верстать. 
+                                        |Пока есть только несколько сайтов, которым могу похвастатьс
+                .col-sm.margin-top--tochka480px                  
+                    .row.align-items-center
+                        .col-lg-4
+                            img.info-img(src="assets/sprite/experience.svg" alt="Информация о разработчике")
+                        .col-lg-8
+                            h3.h3-title Мой опыт в разработке
+                            .info-text В этом блоке я расскажу о себе, что я уже умею. Здесь я укажу другие курсы, которые до этого я уже проходил. 
+                                    |Могу перечислить технологии, которыми уже умею пользоваться. К примеру: html5, css3, sass, jade, git, bootstrap 4 и пр.   
+    section.section-layer
+        .section-layer--block-title
+            h2.h2-title Пройденные курсы
+            .title-description которые помогли мне выполнить это небольшое задание
+        .container
+            .row
+                -
+                    var layers = [
+                        ['layer1', 'assets/images/laravel3.png', 'Основы JavaScript', 'Видеокурс о одном из самых популярных языков программирования - JavaScript. Изучая этот курс вы познаете этот прекрасный язык от самых основ.'],
+                        ['layer2', 'assets/images/laravel4.png', 'Основы jQuery', 'Видеокурс о одном из самых популярных языков программирования - JavaScript. Изучая этот курс вы познаете этот прекрасный язык от самых основ.Видеокурс о одном из самых популярных языков программирования - JavaScript.'],
+                        ['layer3', 'assets/images/laravel5.png', 'Базовые элементы страницы', 'Видеокурс о одном из самых популярных языков программирования - JavaScript. Изучая этот курс вы познаете этот прекрасный язык от самых основ.'],
+                        ['layer4', 'assets/images/laravel7.png', 'Создание адаптивных сайтов', 'В этом курсе вы узнаете как создавать адаптивные сайты, что такое адаптивная верстка и дизайн.'],
+                        ['layer5', 'assets/images/laravel8.png', 'Верстка адаптивной CSS галлереи', 'В этом видеокурсе вы изучите инструменты, техники и подходы для web-разработчика, которые помогут вам решать поставленные задачи более быстро и эффективно.'],
+                        ['layer6', 'assets/images/laravel9.png', 'Верстка адаптивной CSS галлереи', 'В этом курсе мы разберем как сверстать адаптивную css галерею. Также познакомимся с Flexbox.Верстка адаптивной CSS галлереи.'],
+
+                    ]
+                each layer in layers
+                    .col-md-4(id=`${layer[0]}`)
+                        .layer
+                            .layer-hidden
+                            .layer-wrp-img
+                                img(class="layer-img" src=`${layer[1]}`)
+                            .layer-info
+                                h3.h3-title.h3-title--hover= layer[2]
+                                .layer-text= layer[3]
+                            .layer-chk
+                                label.layer-chk--label
+                                    input.layer-chk--input(type="checkbox" data-attr=`#${layer[0]}`)
+                                    span.checkbox-custom
+                                    span.label Просмотрел
+    footer.footer
+        .footer-text Сдесь какойто текст
+        .footer-shrttext И тут какой- то какойто текст
+
+
+        
+
+
+                            

@@ -1,0 +1,56 @@
+@mixin circle ($width, $color) {
+	width: $width;
+	height: $width;
+	border-radius: $width/2;
+	background-color: $color;
+}
+// responsive
+@function rem($px) {
+	@return $px / 16px+0rem;
+}
+@mixin cover() {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+@mixin big_desktop {
+	@media screen and (min-width: $big_desktop) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media screen and (max-width: $desktop) {
+		@content;
+	}
+}
+@mixin laptop {
+	@media screen and (max-width: $laptop){
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: $tablets){
+		@content;
+	}
+}
+@mixin tablets574 {
+	@media screen and (max-width: $tablets574){
+		@content;
+	}
+}
+@mixin phones518 {
+	@media screen and (max-width: $phones518){
+		@content;
+	}
+}
+@mixin phones {
+	@media screen and (max-width: $phones){
+		@content;
+	}
+}
+@mixin iphone {
+	@media screen and (max-width: $iphone){
+		@content;
+	}
+}

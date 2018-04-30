@@ -1,0 +1,230 @@
+.header {
+    min-width: 300px;
+    width: 100%;
+    background-color: #8cc34b;
+    box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.75);
+}
+.user {
+    display: flex;
+    width: 320px;
+     @include phones {
+    width: 280px;
+    }
+} 
+.header-img {
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 22px;
+     @include phones518 {
+    margin-top: 10px;
+}
+    @include phones {
+    margin-top: 10px;
+    margin-right: 10px;
+    }
+}
+.user-name-mail {
+    margin-top: 20px;
+}
+.user-name {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+    
+.user-mail {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+.social {
+    @include phones518 {
+    margin-left: 100px;
+    margin-top: -25px;
+}
+   @include phones {
+    margin-left: 100px;
+    margin-top: -25px;
+}
+}
+
+
+.social-list {
+   display: flex; 
+   justify-content: flex-end;
+   @include phones518 {
+    display: flex; 
+   justify-content: flex-start;
+}
+}
+.social-item {
+    margin-right: 20px;
+
+    &:first-child {
+         margin-top: 5px;
+    }
+
+    &:last-child {
+         margin-right: 0;
+    }
+
+}
+.hero {
+    width: 100%;
+    height: auto;
+}
+.block-title {
+    margin-top: 50px;
+}
+.h2-title {
+    font-family: 'FRB', Arial, sans-serif;
+    color: rgb(45, 43, 53);
+    font-size: 24px;
+    text-align: center;
+    line-height: 0;
+    display: block;
+    @include phones {
+	line-height: 1;
+}
+}
+.title-description {
+    font-family: 'FRI', Arial, sans-serif;
+    color: rgb(140, 138, 146);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.info-img {
+    display: block;
+    @include laptop {
+	margin: auto;
+}   
+}
+.h3-title,
+.info-text {
+     @include laptop {
+	text-align: center;
+}   
+}
+.h3-title--hover {
+    cursor: pointer;
+    &:hover {
+        color: rgb(68, 156, 68);
+    }
+}
+.margin-top--tochka480px {
+     @include tablets574 {
+	margin-top: 50px;
+} 
+}
+.section-layer {
+    background: #f7f7f4;
+    width: 100%;
+    margin-top: 100px;
+}
+.section-layer--block-title {
+    padding-top: 50px;
+}
+.layer {
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow:  1px 1px 9px 0px rgba(50, 50, 50, 0.75);
+    margin-bottom: 50px;
+}
+.layer-hidden {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+	height: 0;
+	transition: all ease 1s;
+    background-color: rgba(155, 1444, 144, 0.5);
+    z-index: 50;
+}
+.layer-active {
+    .layer-hidden {
+    overflow: visible;
+	height: 100%;
+}
+}
+.layer-wrp-img,
+.layer-img{
+    width: 100%;
+}
+.layer-info {
+    width: 80%;
+    margin: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+.layer-chk {
+    width: 100%;
+    height: 40px;
+    background: #c5c5c3;
+    position: relative;
+}
+.layer-chk--label{
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding-top: 8px;
+}
+.layer-chk--input {
+    display: none;
+}
+.checkbox-custom {
+	position: relative;      
+	width: rem(20px);             
+	height: rem(20px);            
+	background: rgb(15, 155, 45);
+    border-radius: 3px;
+    border: 1px solid rgb(209, 202, 202); 
+    cursor: pointer;
+}
+.checkbox-custom {
+	display: inline-block;
+	vertical-align: middle;
+}
+.layer-chk--input:checked + .checkbox-custom::before {
+	content: "\2714";             
+	display: block;			
+	position: absolute;      
+	top: -2px;
+	right:  0px;
+    left:  2px;
+    bottom:  0px;
+	border-radius: 1px;
+    color: white;
+    font-weight: 500;
+}
+.label {
+    margin-left: 15px;
+    cursor: pointer;
+    font-family: 'FRM', Arial, sans-serif;
+    color: rgb(45, 43, 53);
+    font-size: 18px;
+}
+.footer {
+    width: 100%;
+    min-height: 80px;
+    height: auto;
+    background: #000000;
+}
+.footer-text {
+    font-family: 'FRM', Arial, sans-serif;
+    color: rgb(45, 43, 53);
+    font-size: 22px;
+    text-align: center;
+    padding-top: 15px;
+}
+.footer-shrttext {
+    font-family: 'FRM', Arial, sans-serif;
+    color: rgb(45, 43, 53);
+    font-size: 20px;
+    text-align: center;
+
+}
